@@ -4,10 +4,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.luv2code.springdemo.coach.Coach;
 
-public class BeanLifeCycleDemoApp {
+public class MainRunner {
 
 	public static void main(String[] args) {
-		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("BeanLifecycleapplicationContext.xml");
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
 		Coach theCoach = context.getBean("thatSillyCoach", Coach.class);
 
