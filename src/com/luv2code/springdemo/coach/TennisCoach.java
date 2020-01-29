@@ -10,7 +10,7 @@ import com.luv2code.springdemo.fortune.FortuneService;
 public class TennisCoach implements Coach {
 	
 	@Autowired
-	@Qualifier("databaseFortuneService")
+	@Qualifier("randomFortuneService")
 	private FortuneService fortuneService;
 	
 	public TennisCoach() {
