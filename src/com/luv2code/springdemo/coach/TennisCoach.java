@@ -1,7 +1,11 @@
 package com.luv2code.springdemo.coach;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import com.luv2code.springdemo.fortune.FortuneService;
@@ -14,6 +18,16 @@ public class TennisCoach implements Coach {
 	private FortuneService fortuneService;
 	
 	public TennisCoach() {
+	}
+	
+	@PostConstruct
+	public void doStartUpStuff() {
+		System.out.println("In init method.");
+	}
+	
+	@PreDestroy
+	public void doCleanupStuff() {
+		System.out.println("In destroy method.");
 	}
 	
 	@Override
